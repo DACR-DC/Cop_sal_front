@@ -1,0 +1,236 @@
+.rbc-month-view .rbc-month-row {
+    border-bottom: 5px solid #DFC432; 
+  }
+  
+  .rbc-month-view .rbc-day-bg {
+    border-right: 5px solid #DFC432;
+    border-left: 5px solid #DFC432;
+    border-top: 5px solid #DFC432;
+  }
+  
+  .rbc-month-view .rbc-time-slot {
+    border-bottom: 5px solid #DFC432; 
+  }
+  
+  .rbc-month-view .rbc-header {
+    border-bottom: 5px solid #DFC432;
+    border-right: 5px solid #DFC432;
+    border-left: 5px solid #DFC432;
+    border-top: 5px solid #DFC432;
+  }
+
+  .rbc-agenda-view table.rbc-agenda-table tbody > tr > td {
+    background-color: white !important; /* Establece el fondo blanco */
+    color: black !important; /* Establece el color de las letras en negro */
+  }
+
+  .rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+    background-color: white !important; /* Establece el fondo blanco */
+  color: black !important; /* Establece el color de las letras en negro */
+  }
+
+  .modalh2{
+    color: black;
+    font-weight: bold;
+  }
+
+.calendar-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 125vh;           /* Ocupa toda la altura de la ventana */
+    width: 100%;
+}
+
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td {
+  text-align: left;
+}
+
+.calendario-cadafecha{
+  height: 800px;
+  width: 950px;
+}
+
+
+/* Estilos Generales para los Modales */
+.modal-header {
+  font-family: 'Judson', sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  color: #FF6996;
+  background-color: #FFC5CC;
+  text-align: center;
+}
+
+.modal-body {
+  color: #000000;
+  font-size: 20px;
+  background-color: #FFC5CC;
+}
+
+.modal-footer {
+  background-color: #FFC5CC;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Botones del Modal */
+.modal-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Judson', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.modal-content{
+  background-color: #FFC5CC;
+}
+
+.modal-body{
+  background-color: #FFC5CC;
+  font-family: Judson;
+  color: #FF6996;
+  height: 50%;
+}
+
+.modal-button.guardar {
+  background-color: #FF6996; /* Verde */
+  color: white;
+}
+
+.modal-button.guardar:hover {
+  background-color: #FD7AA1;
+}
+
+.modal-button.cancelar {
+  background-color: #FF6996; /* Rojo */
+  color: white;
+}
+
+.modal-button.cancelar:hover {
+  background-color: #FD7AA1;
+}
+
+.modal-button.cerrar {
+  background-color: #FF6996; /* Gris Claro */
+  color: white;
+}
+
+.modal-button.cerrar:hover {
+  background-color: #FD7AA1;
+}
+
+/* Estilos para los Selects dentro del Modal */
+.modal-select {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.rbc-agenda-view {
+  background-color: white !important; /* Establece el fondo blanco */
+  color: black !important; /* Establece el color de las letras en negro */
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content:flex-start; /* Centra horizontalmente */
+    align-items:flex-start;     /* Centra verticalmente */
+    height: 100vh;           /* Ocupa toda la altura de la ventana */
+    width: 100%;
+    padding: 0px 20px 0px 20px !important;
+}
+
+  .calendario-cadafecha {
+    font-size: 12px; /* Ajustar el tamaño de fuente */
+    height: 450px;
+    width: 950px;
+  }
+
+  .react-big-calendar {
+    height: 300px; /* Ajustar la altura del calendario */
+  }
+
+  .rbc-month-view .rbc-month-row {
+    border-bottom: 2px solid #DFC432; 
+  }
+  
+  .rbc-month-view .rbc-day-bg {
+    border-right: 2px solid #DFC432;
+    border-left: 2px solid #DFC432;
+    border-top: 2px solid #DFC432;
+  }
+  
+  .rbc-month-view .rbc-time-slot {
+    border-bottom: 2px solid #DFC432; 
+  }
+  
+  .rbc-month-view .rbc-header {
+    border-bottom: 2px solid #DFC432;
+    border-right: 2px solid #DFC432;
+    border-left: 2px solid #DFC432;
+    border-top: 2px solid #DFC432;
+  }
+
+  .rbc-agenda-view table.rbc-agenda-table tbody > tr > td{
+    padding: 2px 10px 2px 10px;
+  }
+
+  .rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+    padding: 2px 47px 2px 5px!important;
+  }
+
+  .rbc-toolbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 10px;
+    justify-content: left;
+  }
+  .rbc-toolbar button {
+    padding: 6px;
+  }
+
+  .rbc-toolbar .rbc-toolbar-label {
+    padding: 0px 0px 0px 0px;
+    width: 50%;
+    flex-grow:0.5;
+  }
+
+  .modal-header {
+    font-size: 18px !important;
+  }
+
+  .modal-body {
+    font-size: 15px;
+    height: 30% !important;
+  }
+
+  .modal-button {
+    padding: 4px 10px !important;
+    font-size: 13px !important;
+  }
+
+  .modal-select {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px !important;
+  }
+
+  .modal-content{
+    width: 80% !important;
+    height: 60% !important;
+  }
+
+}
+
+
