@@ -13,7 +13,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../admin/Imagenes/Logoconfondo.jpg';
+import logo from '../admin/Imagenes/G2.png';
 import citas from './Imagenes/citahoy.png';
 import citasHover from './Imagenes/citahoypink.png'; // Ícono alternativo
 import calendario from './Imagenes/calendario.png';

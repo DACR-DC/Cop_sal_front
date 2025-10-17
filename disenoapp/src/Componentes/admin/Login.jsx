@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
-import logo from './Imagenes/Logocompleto.jpg'; 
+import logo from './Imagenes/G2.png'; 
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
