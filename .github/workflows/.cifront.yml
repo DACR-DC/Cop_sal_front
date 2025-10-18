@@ -1,0 +1,45 @@
+name: PIPELINE_SEGURIDAD
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: Install - Logs 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Carpeta de logs
+        run: mkdir -p pipeline_logs
+
+      - name: Metadata del run
+        run: |
+          echo "Commit: $GITHUB_SHA" | tee -a pipeline_logs/metadata.txt
+          echo "Branch: $GITHUB_REF_NAME" | tee -a pipeline_logs/metadata.txt
+          node -v | tee -a pipeline_logs/metadata.txt
+          npm -v | tee -a pipeline_logs/metadata.txt
+
+      - name: Instalar dependencias (npm ci)
+        run: |
+          npm ci 2>&1 | tee -a pipeline_logs/install.log
+
+      - name: Subir  logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-logs-${{ github.run_id }}
+          path: pipeline_logs
